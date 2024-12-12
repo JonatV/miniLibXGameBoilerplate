@@ -83,6 +83,16 @@ void		draw_line_horizontal(t_img *img, int x, int y, int w, int color);
 /*----------------  optimization.c  ---------------*/
 void		img_pix_put(t_img *img, int x, int y, int color);
 
+/*----------------  init_project.c  ---------------*/
+bool		init_project(t_game **game);
+
+
+/*----------------  init_window_struct.c  ---------------*/
+bool		init_window_struct(t_game **game);
+
+/*----------------  init_game_struct.c  ---------------*/
+bool		init_game_struct(t_game **game);
+
 /*----------------  utils.c  ---------------*/
 uint64_t		gettimeofday_ms(void);
 uint64_t		timestamp_in_ms(t_game *game);
