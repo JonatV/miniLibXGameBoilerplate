@@ -100,7 +100,7 @@ void	copy_pixel_img(t_img src_img, int src_x, int src_y, t_img dst_img, int dst_
 }
 
 /* IN GENERAL:
-** Destroy image
+** Destroy image and xpm images
 ** Destroy display
 ** Destroy window
 ** Destroy map grid
