@@ -6,6 +6,7 @@ int	expose_hook(t_game *game)
 	int	i;
 
 	printf("expose_hook\n");
+	put_img_to_img(&game->win.screen, &game->xpm_images[xpm_home_screen], 0, 0);
 	i =	0;
 	while (i < 100)
 	{
