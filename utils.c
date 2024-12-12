@@ -110,46 +110,35 @@ void	copy_pixel_img(t_img src_img, int src_x, int src_y, t_img dst_img, int dst_
 int	close_game(void *p)
 {
 	t_game	*game;
+	int		i;
 
 	game = (t_game *)p;
-	printf("game: %p\n", game);
+	i = 0;
+
+	// destroy all the images and xpm images
 	if (game->win.screen.mlx_img)
 		mlx_destroy_image(game->win.mlx_ptr, game->win.screen.mlx_img);
+	while (i < xpm_null)
+	{
+		if (game->xpm_images[i].mlx_img)
+			mlx_destroy_image(game->win.mlx_ptr, game->xpm_images[i].mlx_img);
+		i++;
+	}
+
+	// destroy window
 	if (game->win.win_ptr)
 		mlx_destroy_window(game->win.mlx_ptr, game->win.win_ptr);
+
+	// destroy display
 	if (game->win.mlx_ptr)
 		mlx_destroy_display(game->win.mlx_ptr);
 
 	// destroy map grid
-	int i = 0;
+	i = 0;
 	while (i < game->map.height)
 		free(game->map.map_grid[i++]);
 	free(game->map.map_grid);
 
-	// destroy all xpm images
-	// i = 0;
-	// while (i < xpm_null - 1)
-	// {
-	// 	if (game->xpm_images[i].mlx_img)
-	// 		mlx_destroy_image(game->win.mlx_ptr, game->xpm_images[i].mlx_img);
-	// 	i++;
-	// }
-	// mlx_destroy_image(game->win.mlx_ptr, game->xpm_images[xpm_home_screen].mlx_img);
-	// mlx_destroy_image(game->win.mlx_ptr, game->xpm_images[xpm_game_over].mlx_img);
-	// mlx_destroy_image(game->win.mlx_ptr, game->xpm_images[xpm_menu].mlx_img);
-	// mlx_destroy_image(game->win.mlx_ptr, game->xpm_images[xpm_map_focus].mlx_img);
-	// mlx_destroy_image(game->win.mlx_ptr, game->xpm_images[xpm_inventory].mlx_img);
-	if (game->xpm_images[xpm_home_screen].mlx_img)
-		printf("img: %p\n", game->xpm_images[xpm_home_screen].mlx_img);
-	if (game->xpm_images[xpm_game_over].mlx_img)
-		printf("img: %p\n", game->xpm_images[xpm_game_over].mlx_img);
-	if (game->xpm_images[xpm_menu].mlx_img)
-		printf("img: %p\n", game->xpm_images[xpm_menu].mlx_img);
-	if (game->xpm_images[xpm_map_focus].mlx_img)
-		printf("img: %p\n", game->xpm_images[xpm_map_focus].mlx_img);
-	if (game->xpm_images[xpm_inventory].mlx_img)
-		printf("img: %p\n", game->xpm_images[xpm_inventory].mlx_img);
-	
 	free(game);
 	exit(0);
 }
