@@ -42,7 +42,7 @@ This project is a boilerplate for a game using the MiniLibX library. It includes
 ## Getting Started
 
 ### Prerequisities
-- **MiniLibX**: Ensure you have the MiniLibX library installed.
+- **MiniLibX**: Ensure you have the [MiniLibX library](https://github.com/42Paris/minilibx-linux) installed.
 - **Compiler**: This version use `clang` (feel free to change it).
 ### Building the Project
 To build the project, you simply have to run the following command:
@@ -56,8 +56,11 @@ After building the project, you can run the game using (the Makefile already hav
 ./game_boilerplate
 ```
 ## TODOs
-* [ ] Animation tools
-* [ ] Animated `press enter` button
+* Boilerplate
+	* [ ] Animation tools
+	* [ ] Animated `press enter` button
+* Readme
+	* [ ] Add links with interesting minilibx docs
 
 ## Contributing
 Want to help out? 🧠 Fork the repo, make your changes, and send a pull request.
