@@ -57,6 +57,7 @@ After building the project, you can run the game using (the Makefile already hav
 ```
 ## TODOs
 * [ ] Animation tools
+* [ ] Animated `press enter` button
 
 ## Contributing
 Want to help out? 🧠 Fork the repo, make your changes, and send a pull request.
