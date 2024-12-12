@@ -100,6 +100,18 @@ typedef struct s_game
 	uint64_t	updated_at;
 	int			fps;
 }	t_game;
+
+/*----------------  expose_hook.c  ---------------*/
+int		expose_hook(t_game *game);
+
+/*----------------  mouse_hook.c  ---------------*/
+int		mouse_move(int x, int y, t_game *game);
+int		mouse_press(int button, int x, int y, t_game *game);
+
+/*----------------  key_hook.c  ---------------*/
+int		key_press(int keycode, t_game *game);
+int		key_release(int keycode, t_game *game);
+
 /*----------------  main.c  ---------------*/
 int		main(void);
 

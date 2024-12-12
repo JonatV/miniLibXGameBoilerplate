@@ -5,6 +5,7 @@ MLX_PATH = minilibx_linux/
 SRCS_PATH = sources/
 
 INIT = init/
+HOOK = hook/
 DRAW = drawing_tools/
 
 INCLUDES = $(MLX_PATH)mlx.h \
@@ -13,6 +14,7 @@ INCLUDES = $(MLX_PATH)mlx.h \
 SRC = main.c \
 		utils.c optimization.c \
 		$(INIT)init_project.c $(INIT)init_game_struct.c $(INIT)init_window_struct.c $(INIT)init_map_struct.c $(INIT)init_player_struct.c $(INIT)init_keys_struct.c $(INIT)init_hooks_logics.c $(INIT)init_xpm_images.c \
+		$(HOOK)expose_hook.c $(HOOK)key_hook.c $(HOOK)mouse_hook.c \
 		$(DRAW)draw_vertex.c $(DRAW)draw_rectangle.c $(DRAW)draw_circle.c $(DRAW)draw_line.c
 		
 OBJ = $(SRC:.c=.o)
