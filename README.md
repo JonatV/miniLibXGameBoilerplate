@@ -1,6 +1,6 @@
 # Game Boilerplate
 
-![Game Screenshot](assets/home_screen.xpm)
+![Game Screenshot](assets/home_screen.png)
 
 ## Overview
 
@@ -55,4 +55,4 @@ After building the project, you can run the game using (the Makefile already hav
 ```bash
 ./game_boilerplate
 ```
-![Game Over Screenshot](assets/game_over.xpm)
+![Game Over Screenshot](assets/game_over.png)
