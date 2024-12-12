@@ -41,6 +41,20 @@ typedef struct s_game
 }	t_game;
 /*----------------  main.c  ---------------*/
 int		main(void);
+
+/*----------------  draw_rectangle.c  ---------------*/
+void		draw_rect(t_img *img, int x, int y, int w, int h, int color);
+
+/*----------------  draw_circle.c  ---------------*/
+void		draw_circle(t_img *img, int x, int y, int radius, int color);
+
+/*----------------  draw_vertex.c  ---------------*/
+int		draw_vertex(t_img *img, int x_start, int y_start, int x_end, int y_end, int color);
+
+/*----------------  draw_line.c  ---------------*/
+void		draw_line_vertical(t_img *img, int x, int y, int h, int color);
+void		draw_line_horizontal(t_img *img, int x, int y, int w, int color);
+
 /*----------------  optimization.c  ---------------*/
 void		img_pix_put(t_img *img, int x, int y, int color);
 
