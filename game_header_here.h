@@ -53,10 +53,23 @@ typedef struct s_win
 	int		width;
 	int		height;
 }		t_win;
+typedef struct s_map
+{
+	int		**map_grid;
+	int		width;
+	int		height;
+	int		tile_size;
+
+	int		floor_color;
+	int		wall_color;
+	int		empty_color;
+	int		player_color;
+}		t_map;
 
 typedef struct s_game
 {
 	t_win		win;
+	t_map		map;
 	unsigned int	win_w;
 	unsigned int	win_h;
 	enum game_state	state;
@@ -86,6 +99,9 @@ void		img_pix_put(t_img *img, int x, int y, int color);
 /*----------------  init_project.c  ---------------*/
 bool		init_project(t_game **game);
 
+
+/*----------------  init_map_struct.c  ---------------*/
+bool		init_map_struct(t_game *game);
 
 /*----------------  init_window_struct.c  ---------------*/
 bool		init_window_struct(t_game **game);
