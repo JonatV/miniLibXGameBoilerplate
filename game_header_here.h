@@ -31,6 +31,17 @@ enum game_state
 	// add more here
 };
 
+enum xpm_images
+{
+	xpm_home_screen,
+	xpm_game_over,
+	xpm_menu,
+	xpm_map_focus,
+	xpm_inventory,
+	xpm_null,
+	// add more here
+};
+
 typedef struct s_keys
 {
 	bool	w;
@@ -99,6 +110,10 @@ typedef struct s_game
 	uint64_t	created_at;
 	uint64_t	updated_at;
 	int			fps;
+
+	// array of xpm images
+	t_img		xpm_images[5];
+	// t_img		xpm_images[xpm_null];
 }	t_game;
 
 /*----------------  expose_hook.c  ---------------*/
@@ -143,6 +158,8 @@ bool		init_project(t_game **game);
 /*----------------  init_player_struct.c  ---------------*/
 bool		init_player_struct(t_game *game);
 
+/*----------------  init_xpm_images.c  ---------------*/
+bool		init_xpm_images(t_game *game);
 
 /*----------------  init_map_struct.c  ---------------*/
 bool		init_map_struct(t_game *game);

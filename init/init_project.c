@@ -8,6 +8,8 @@ bool	init_project(t_game **game)
 		return (printf("Error: init_window\n"), false);
 	if (!init_map_struct(*game))
 		return (printf("Error: init_map\n"), false);
+	if (!init_xpm_images(*game))
+		return (printf("Error: init_xpm_images\n"), false);
 	if (!init_player_struct(*game))
 		return (printf("Error: init_player\n"), false);
 	if (!init_keys_struct(*game))
