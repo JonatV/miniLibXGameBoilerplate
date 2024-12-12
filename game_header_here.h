@@ -11,6 +11,25 @@
 # include <stdint.h>
 
 #define TITLE "My Wonderful Title"
+#define WIN_W 1200
+#define WIN_H 600
+#define FPS 10
+
+// has to be define in the parsing latter
+#define MAP_H 13
+#define MAP_W 24
+#define TILE_SIZE 32
+
+enum game_state
+{
+	home_screen,
+	game_screen,
+	game_over,
+	menu,
+	map_focus,
+	inventory,
+	// add more here
+};
 typedef struct s_img
 {
 	void	*mlx_img;
@@ -38,6 +57,12 @@ typedef struct s_win
 typedef struct s_game
 {
 	t_win		win;
+	unsigned int	win_w;
+	unsigned int	win_h;
+	enum game_state	state;
+	uint64_t	created_at;
+	uint64_t	updated_at;
+	int			fps;
 }	t_game;
 /*----------------  main.c  ---------------*/
 int		main(void);
