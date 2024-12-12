@@ -11,6 +11,9 @@
 # include <stdint.h>
 
 #define TITLE "My Wonderful Title"
+/*----------------  optimization.c  ---------------*/
+void		img_pix_put(t_img *img, int x, int y, int color);
+
 /*----------------  utils.c  ---------------*/
 uint64_t		gettimeofday_ms(void);
 uint64_t		timestamp_in_ms(t_game *game);
