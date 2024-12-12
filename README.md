@@ -55,4 +55,7 @@ After building the project, you can run the game using (the Makefile already hav
 ```bash
 ./game_boilerplate
 ```
+## TODOs
+* [ ] Animation tools
+
 ![Game Over Screenshot](assets/game_over.png)
