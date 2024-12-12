@@ -4,12 +4,14 @@ INCPATH = ./
 MLX_PATH = minilibx_linux/
 SRCS_PATH = sources/
 
+DRAW = drawing_tools/
 
 INCLUDES = $(MLX_PATH)mlx.h \
 			game_header_here.h
 
 SRC = main.c \
 		utils.c optimization.c \
+		$(DRAW)draw_vertex.c $(DRAW)draw_rectangle.c $(DRAW)draw_circle.c $(DRAW)draw_line.c
 OBJ = $(SRC:.c=.o)
 
 CC = clang
