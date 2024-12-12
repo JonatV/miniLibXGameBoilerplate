@@ -58,4 +58,6 @@ After building the project, you can run the game using (the Makefile already hav
 ## TODOs
 * [ ] Animation tools
 
+## Contributing
+Want to help out? 🧠 Fork the repo, make your changes, and send a pull request.
 ![Game Over Screenshot](assets/game_over.png)
