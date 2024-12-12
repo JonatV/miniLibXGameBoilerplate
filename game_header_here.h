@@ -183,6 +183,9 @@ int		close_game(void *p);
 /*----------------  handle_keys.c  ---------------*/
 void		handle_keys(t_game *game);
 
+/*----------------  home_screen.c  ---------------*/
+int		layout_home_screen(t_game *game);
+
 /*----------------  update.c  ---------------*/
 int		update(t_game *game);
 
