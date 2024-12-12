@@ -11,6 +11,36 @@
 # include <stdint.h>
 
 #define TITLE "My Wonderful Title"
+typedef struct s_img
+{
+	void	*mlx_img;
+	char	*addr;
+	int		bpp; /* bits per pixel */
+	int		line_len;
+	int		endian;
+
+	int		width;
+	int		height;
+
+	struct s_win	*win;
+}		t_img;
+
+typedef struct s_win
+{
+	char	*title;
+	void	*mlx_ptr;
+	void	*win_ptr;
+	t_img	screen;
+	int		width;
+	int		height;
+}		t_win;
+
+typedef struct s_game
+{
+	t_win		win;
+}	t_game;
+/*----------------  main.c  ---------------*/
+int		main(void);
 /*----------------  optimization.c  ---------------*/
 void		img_pix_put(t_img *img, int x, int y, int color);
 
