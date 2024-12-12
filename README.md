@@ -57,6 +57,7 @@ After building the project, you can run the game using (the Makefile already hav
 ```
 ## TODOs
 * Boilerplate
+	* [ ] HUD
 	* [ ] Animation tools
 	* [ ] Animated `press enter` button
 * Readme
