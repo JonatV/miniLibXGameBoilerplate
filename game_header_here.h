@@ -13,12 +13,19 @@
 #define TITLE "My Wonderful Title"
 #define WIN_W 1200
 #define WIN_H 600
-#define FPS 10
+#define FPS 60
 
 // has to be define in the parsing latter
 #define MAP_H 13
 #define MAP_W 24
 #define TILE_SIZE 32
+
+#define C_BLACK		0x1A1A1A
+#define C_DARK_RED	0x311F1F
+#define C_DEEP_RED	0x8C2B36
+#define C_RED		0xF53F39
+#define C_DARK_GREY	0x535353
+#define C_GREY		0xABABAB
 
 enum game_state
 {
@@ -54,6 +61,10 @@ typedef struct s_keys
 	bool	esc;
 	bool	enter;
 	bool	space;
+	bool	m_pressed;
+	bool	tab_pressed;
+	bool	enter_pressed;
+	bool	space_pressed;
 }		t_keys;
 
 typedef struct s_img
@@ -183,8 +194,11 @@ int		close_game(void *p);
 /*----------------  handle_keys.c  ---------------*/
 void		handle_keys(t_game *game);
 
-/*----------------  home_screen.c  ---------------*/
+/*----------------  layout_home_screen.c  ---------------*/
 int		layout_home_screen(t_game *game);
+
+/*----------------  layout_game_screen.c  ---------------*/
+int		layout_game_screen(t_game *game);
 
 /*----------------  update.c  ---------------*/
 int		update(t_game *game);

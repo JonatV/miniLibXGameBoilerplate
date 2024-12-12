@@ -18,6 +18,9 @@ int	update(t_game *game)
 			printf("FPS: %d\n", game->fps);
 		// code to update the game here
 		handle_keys(game);
+		if (game->state == home_screen)
+			return (0);
+		layout_game_screen(game);
 	}
 	return (0);
 }

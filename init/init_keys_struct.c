@@ -12,5 +12,10 @@ bool	init_keys_struct(t_game *game)
 	game->keys.space = false;	// SEE MAP
 	game->keys.tab = false;		// SEE INVENTORY
 	game->keys.m = false;		// MENU
+	
+	game->keys.m_pressed = false;
+	game->keys.tab_pressed = false;
+	game->keys.enter_pressed = false;
+	game->keys.space_pressed = false;
 	return (true);
 }
