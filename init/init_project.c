@@ -12,6 +12,7 @@ bool	init_project(t_game **game)
 		return (printf("Error: init_player\n"), false);
 	if (!init_keys_struct(*game))
 		return (printf("Error: init_keys\n"), false);
+	init_hooks_logics(*game);
 	printf("Project initialized\n");
 	return (true);
 }

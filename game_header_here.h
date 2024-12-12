@@ -122,6 +122,8 @@ void		img_pix_put(t_img *img, int x, int y, int color);
 /*----------------  init_keys_struct.c  ---------------*/
 bool		init_keys_struct(t_game *game);
 
+/*----------------  init_hooks_logics.c  ---------------*/
+bool		init_hooks_logics(t_game *game);
 
 /*----------------  init_project.c  ---------------*/
 bool		init_project(t_game **game);
