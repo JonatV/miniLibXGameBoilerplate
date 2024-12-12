@@ -163,4 +163,10 @@ void		put_img_to_img(t_img *dst, t_img *src, int x, int y);
 void		copy_pixel_img(t_img src_img, int src_x, int src_y, t_img dst_img, int dst_x, int dst_y);
 int		close_game(void *p);
 
+/*----------------  handle_keys.c  ---------------*/
+void		handle_keys(t_game *game);
+
+/*----------------  update.c  ---------------*/
+int		update(t_game *game);
+
 #endif
