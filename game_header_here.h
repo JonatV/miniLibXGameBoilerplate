@@ -30,6 +30,21 @@ enum game_state
 	inventory,
 	// add more here
 };
+
+typedef struct s_keys
+{
+	bool	w;
+	bool	a;
+	bool	s;
+	bool	d;
+	bool	e;
+	bool	m;
+	bool	tab;
+	bool	esc;
+	bool	enter;
+	bool	space;
+}		t_keys;
+
 typedef struct s_img
 {
 	void	*mlx_img;
@@ -53,6 +68,12 @@ typedef struct s_win
 	int		width;
 	int		height;
 }		t_win;
+
+typedef struct s_player
+{
+	// todo
+}		t_player;
+
 typedef struct s_map
 {
 	int		**map_grid;
@@ -69,6 +90,8 @@ typedef struct s_map
 typedef struct s_game
 {
 	t_win		win;
+	t_keys		keys;
+	t_player	player;
 	t_map		map;
 	unsigned int	win_w;
 	unsigned int	win_h;
@@ -96,8 +119,15 @@ void		draw_line_horizontal(t_img *img, int x, int y, int w, int color);
 /*----------------  optimization.c  ---------------*/
 void		img_pix_put(t_img *img, int x, int y, int color);
 
+/*----------------  init_keys_struct.c  ---------------*/
+bool		init_keys_struct(t_game *game);
+
+
 /*----------------  init_project.c  ---------------*/
 bool		init_project(t_game **game);
+
+/*----------------  init_player_struct.c  ---------------*/
+bool		init_player_struct(t_game *game);
 
 
 /*----------------  init_map_struct.c  ---------------*/
@@ -118,4 +148,5 @@ t_img		set_new_xpm(char *path, t_win *window);
 void		put_img_to_img(t_img *dst, t_img *src, int x, int y);
 void		copy_pixel_img(t_img src_img, int src_x, int src_y, t_img dst_img, int dst_x, int dst_y);
 int		close_game(void *p);
+
 #endif

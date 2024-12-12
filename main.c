@@ -6,5 +6,6 @@ int main(void)
 
 	if (!init_project(&game))
 		return (1);
+	printf("Initialization successful, entering mlx_loop\n");
 	return 0;
 }
